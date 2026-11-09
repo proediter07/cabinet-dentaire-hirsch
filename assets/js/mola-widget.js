@@ -1,0 +1,1 @@
+/* AI Chatbot widget permanently removed as per client requirements */
