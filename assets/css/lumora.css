@@ -9260,3 +9260,319 @@ html, body {
   }
 }
 
+
+
+/* ========================================================
+   DR. HIRSCH LUXURY SERVICE SHOWCASE (Smooth & High-End)
+   ======================================================== */
+.service-showcase_element {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  grid-column-gap: 36px;
+  grid-row-gap: 36px;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.service-showcase_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.service-showcase_item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 22px 26px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-showcase_item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.service-showcase_item:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.service-showcase_item.is-active {
+  background: #ffffff;
+  border-color: #0d9488;
+  box-shadow: 0 12px 32px rgba(13, 148, 136, 0.12);
+  transform: translateY(-2px);
+}
+
+.service-showcase_item.is-active::before {
+  background: #0d9488;
+}
+
+.service-showcase_item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.service-showcase_num {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 15px;
+  color: #0d9488;
+  letter-spacing: 0.05em;
+  flex: none;
+}
+
+.service-showcase_item-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  flex: 1;
+  line-height: 1.35;
+  transition: color 0.25s ease;
+}
+
+.service-showcase_item.is-active .service-showcase_item-title {
+  color: #0f766e;
+}
+
+.service-showcase_arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  flex: none;
+  transition: all 0.3s ease;
+}
+
+.service-showcase_item.is-active .service-showcase_arrow {
+  background: #0d9488;
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+.service-showcase_item-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, margin-top 0.3s ease;
+  margin-top: 0;
+}
+
+.service-showcase_item.is-active .service-showcase_item-body {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.service-showcase_desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.service-showcase_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.service-tag_pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.service-tag_pill.is-glass {
+  background: rgba(1, 36, 41, 0.72);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.service-showcase_mobile-img {
+  display: none;
+  margin: 14px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.service-showcase_mobile-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-showcase_btn-wrap {
+  margin-top: 10px;
+}
+
+/* Right Visual Photo Showcase */
+.service-showcase_visual {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  background: #012429;
+  min-height: 520px;
+}
+
+.service-showcase_slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.service-showcase_slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.service-showcase_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-showcase_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 40%, rgba(1, 36, 41, 0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  pointer-events: none;
+}
+
+.service-showcase_overlay-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-showcase_overlay-badge {
+  background: rgba(1, 36, 41, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 12px 18px;
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+/* Neutralize old scroll-hijacking triggers */
+.scroll-mobile_trigger,
+.service_sticky-trigger {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-bottom: 0 !important;
+}
+.scroll-mobile_camera,
+.service_sticky-camera {
+  position: static !important;
+  height: auto !important;
+  top: auto !important;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+  .service-showcase_element {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .service-showcase_visual {
+    display: none;
+  }
+  .service-showcase_mobile-img {
+    display: block;
+  }
+  .service-showcase_item-title {
+    font-size: 18px;
+  }
+  .service-showcase_item {
+    padding: 18px 20px;
+  }
+}
+
+
+@media (max-width: 479px) {
+  .navbar_wrap, .navbar_container {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  .navbar_logo {
+    max-width: 175px !important;
+    width: 175px !important;
+    flex: 0 0 175px !important;
+  }
+  .navbar-content_wrap {
+    flex: 1 1 auto !important;
+    max-width: calc(100vw - 195px) !important;
+    justify-content: flex-end !important;
+  }
+}
+
+
+@media (max-width: 479px) {
+  .navbar_container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .navbar_logo {
+    max-width: 155px !important;
+    width: 155px !important;
+    flex: 0 0 155px !important;
+  }
+  .navbar-button_wrapper {
+    margin-left: 0 !important;
+    gap: 4px !important;
+  }
+  .lang-switch-wrap {
+    margin: 0 4px !important;
+    padding: 2px !important;
+  }
+  .lang-btn {
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+  }
+}
