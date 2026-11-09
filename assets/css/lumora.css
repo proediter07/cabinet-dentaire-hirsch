@@ -9088,9 +9088,17 @@ footer{border-top:3px solid var(--primitive-color--primary-500,#24a3b1);}
 .hero-carousel-img.is-active{opacity:1;}
 
 /* ===== Hero: pull content up so the info strip is visible on load ===== */
-.padding-home-hero{padding-top:104px!important;}
-@media(min-width:992px){.our-info_wrap{margin-top:-165px;}}
-@media(max-width:991px){.padding-home-hero{padding-top:120px!important;}.our-info_wrap{margin-top:24px;}}
+/* ===== Hero: balanced luxury spacing on desktop & mobile ===== */
+.padding-home-hero { padding-top: 140px !important; padding-bottom: 40px !important; }
+@media (min-width: 992px) {
+  .padding-home-hero { padding-top: 148px !important; padding-bottom: 60px !important; }
+  .our-info_wrap { margin-top: 24px !important; }
+  .home-hero_content { margin-bottom: 36px !important; max-width: 720px !important; }
+}
+@media (max-width: 991px) {
+  .padding-home-hero { padding-top: 110px !important; padding-bottom: 30px !important; }
+  .our-info_wrap { margin-top: 24px !important; }
+}
 
 /* ===== Premium DARK footer (was bland cream) ===== */
 .section_footer{background:var(--primitive-color--primary-900,#011f23)!important;border-top:3px solid var(--primitive-color--primary-500,#24a3b1);}
@@ -9844,5 +9852,211 @@ html, body {
   .lang-btn {
     padding: 3px 6px !important;
     font-size: 10px !important;
+  }
+}
+
+
+/* ========================================================
+   STORY SLIDER UNIFORM CARDS & ZERO MOBILE GAPS
+   ======================================================== */
+.story_slider {
+  width: 100% !important;
+  background: transparent !important;
+}
+
+.story-slider_mask {
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.story-slider_slide {
+  height: auto !important;
+}
+
+.story-slider_card {
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+.story-slider_image-wrap {
+  width: 100% !important;
+  height: 250px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #f1f5f9 !important;
+}
+
+.story-slider_image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+.story-slider_content {
+  padding: 24px !important;
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+@media (max-width: 991px) {
+  .story-slider_image-wrap {
+    height: 210px !important;
+  }
+  .story-slider_mask {
+    height: 410px !important;
+    max-height: 410px !important;
+  }
+  .story-slider_slide {
+    height: 410px !important;
+  }
+  .story-slider_card {
+    height: 100% !important;
+  }
+  .story-slider_content {
+    padding: 18px !important;
+  }
+  .section_story .section-padding.padding-120x120 {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .story-slider_image-wrap {
+    height: 190px !important;
+  }
+  .story-slider_mask {
+    height: 395px !important;
+    max-height: 395px !important;
+  }
+  .story-slider_slide {
+    height: 395px !important;
+  }
+  .story-slider_card {
+    height: 100% !important;
+  }
+  .story-slider_content {
+    padding: 16px !important;
+  }
+  .story-slider_title {
+    font-size: 18px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 6px !important;
+  }
+  .story-slider_content p {
+    font-size: 13.5px !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* ========================================================
+   DESKTOP NAVBAR & BRAND PROMINENCE
+   ======================================================== */
+@media (min-width: 992px) {
+  .navbar_wrap {
+    height: 84px !important;
+  }
+  .navbar_container {
+    height: 84px !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+  .luxury-brand_lockup {
+    gap: 12px !important;
+    flex-shrink: 0 !important;
+  }
+  .luxury-brand_emblem {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 12px !important;
+    padding: 6px !important;
+  }
+  .luxury-brand_name {
+    font-size: 19px !important;
+    letter-spacing: -0.01em !important;
+  }
+  .luxury-brand_subtitle {
+    font-size: 10px !important;
+    letter-spacing: 0.1em !important;
+  }
+  .navbar-content_wrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    flex: 1 1 auto !important;
+    border-left: none !important;
+  }
+  .navbar_menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2px !important;
+  }
+  .navbar_link {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    padding: 6px 8px !important;
+    white-space: nowrap !important;
+  }
+  .navbar-button_wrapper {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  .navbar-button_wrapper .button_primary {
+    padding: 10px 18px !important;
+    font-size: 13.5px !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar_link {
+    font-size: 13.5px !important;
+    padding: 6px 10px !important;
+  }
+  .navbar_menu {
+    gap: 4px !important;
+  }
+}
+
+@media (min-width: 1360px) {
+  .navbar_container {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    max-width: 1380px !important;
+    margin: 0 auto !important;
+  }
+  .luxury-brand_emblem {
+    width: 46px !important;
+    height: 46px !important;
+  }
+  .luxury-brand_name {
+    font-size: 21px !important;
+  }
+  .luxury-brand_subtitle {
+    font-size: 11px !important;
+  }
+  .navbar_link {
+    font-size: 14.5px !important;
+    padding: 8px 14px !important;
+  }
+  .navbar_menu {
+    gap: 6px !important;
   }
 }
