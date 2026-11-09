@@ -1,9 +1,12 @@
 /**
  * Internationalization (i18n) Engine for Cabinet Dentaire Dr. Shandy Hirsch
- * Default Language: FRENCH (FR) - 1st Language
- * Secondary Language: ENGLISH (EN) - 2nd Language
+ * Primary Starting Language: FRENCH (FR) - 100% French by default
+ * Secondary Language: ENGLISH (EN)
  */
 (function() {
+    if (window.__hirsch_i18n_loaded) return;
+    window.__hirsch_i18n_loaded = true;
+
     var translations = {
         fr: {
             "meta_title": "Cabinet Dentaire Dr. Shandy Hirsch | Chirurgien-Dentiste Luxembourg-Bonnevoie",
@@ -22,22 +25,31 @@
             "hero_cta_call": "📞 +352 20 28 75 54",
             
             "lead_head": "Demande de Rappel Rapide",
-            "lead_sub": "Laissez vos coordonnées, l'équipe du cabinet vous recontacte rapidement.",
+            "lead_sub": "Laissez vos coordonnées ou prenez RDV directement sur Doctena.",
             "lead_ph_name": "Votre Nom et Prénom",
             "lead_ph_phone": "Numéro de téléphone (+352...)",
-            "lead_btn": "Être rappelé",
-            "lead_note": "Cabinet dentaire Dr. Shandy Hirsch • 12, rue William Turner",
+            "lead_btn": "Prendre RDV (Doctena)",
+            "lead_note": "📞 Appel direct : <a href=\"tel:+35220287554\" style=\"color:#be185d; font-weight:700; text-decoration:underline;\">+352 20 28 75 54</a>",
             "lead_success_title": "Merci !",
-            "lead_success_sub": "Notre équipe vous recontactera très prochainement.",
+            "lead_success_sub": "Redirection vers l'agenda Doctena du Dr. Hirsch...",
+
+            "info_1_title": "Prise de Rendez-vous",
+            "info_1_desc": "Réservez en ligne 24/7 sur Doctena →",
+            "info_2_title": "Contact & Urgences",
+            "info_3_title": "Horaires d'Ouverture",
+            "info_3_hours1": "Lun – Jeu : 8h30 – 17h30",
+            "info_3_hours2": "Ven : 8h30 – 12h30",
+            "info_3_hours3": "Sam (1x/mois) : 9h30 – 14h00",
+            "info_3_hours4": "Dim : Service CHL (112)",
 
             "story_tag": "Bienvenue au Cabinet",
             "story_title": "Une Prise en Charge Chaleureuse, Bienveillante et <span class=\"text-highlighted\">Sans Stress</span>",
-            "story_intro": "Moien ! Bienvenue au cabinet dentaire Dr Hirsch à Luxembourg – Bonnevoie. Le cabinet est dédié à fournir des soins dentaires de qualité et personnalisés. Notre priorité est de vous aider à maintenir une santé bucco-dentaire optimale dans une atmosphère apaisante et chaleureuse.",
+            "story_intro": "Bienvenue au cabinet dentaire Dr. Shandy Hirsch à Luxembourg – Bonnevoie. Le cabinet est dédié à fournir des soins dentaires de haute qualité et personnalisés. Notre priorité est de vous aider à maintenir une santé bucco-dentaire optimale dans une atmosphère apaisante et chaleureuse.",
             "story_slide1_title": "Approche Douce & Anti-Peur",
             "story_slide1_desc": "Pour les patients anxieux ou appréhendant le dentiste, le Dr. Hirsch prend tout le temps nécessaire avec écoute et délicatesse.",
-            "story_slide2_title": "Fauteuil Dentsply Sirona Sinius",
-            "story_slide2_desc": "Équipement allemand de haute technologie offrant une ergonomie optimale et un confort absolu tout au long de vos soins.",
-            "story_slide3_title": "Micro-Chirurgie & Loupes Orascoptic",
+            "story_slide2_title": "Fauteuil Ergonomique Haute Technologie",
+            "story_slide2_desc": "Équipement médical de haute technologie offrant une ergonomie optimale et un confort absolu tout au long de vos soins.",
+            "story_slide3_title": "Aides Optiques & Micro-Chirurgie",
             "story_slide3_desc": "Grossissement optique haute définition pour une précision micrométrique lors des chirurgies implantaires et soins parodontaux.",
             "story_slide4_title": "Spécialiste Diplômée",
             "story_slide4_desc": "Diplômée des Universités de Paris et Rennes. Une formation hospitalière continue de haut niveau en implantologie et parodontologie.",
@@ -58,28 +70,24 @@
             "srv_4_desc": "Détartrage doux aux ultrasons, bilans complets, soins conservateurs, pathologie de la muqueuse orale (Université de Paris) et consultations enfants avec une bienveillance totale pour instaurer une confiance durable.",
             "srv_cta": "Prendre RDV",
 
-            "team_tag": "Médecin-Dentiste & Équipe",
-            "team_title": "Docteur Shandy Hirsch <span class=\"text-highlighted\">& Son Équipe</span>",
+            "team_tag": "Votre Praticienne",
+            "team_title": "Docteur Shandy Hirsch <span class=\"text-highlighted\">Chirurgien-Dentiste</span>",
             "team_subtitle": "Une prise en charge attentionnée, personnalisée et d'une grande rigueur clinique au sein d'un cabinet moderne et chaleureux à Luxembourg-Bonnevoie.",
             "team_doc_name": "Dr. Shandy Hirsch",
-            "team_doc_role": "Chirurgien-Dentiste • Fondatrice",
-            "team_doc_bio": "Spécialiste diplômée des Universités de Paris et Rennes en Parodontologie et Implantologie Orale. Réputée pour sa douceur, sa bienveillance et son écoute attentive des patients anxieux.",
+            "team_doc_role": "Chirurgien-Dentiste • Fondatrice du Cabinet",
+            "team_doc_bio": "Spécialiste diplômée des prestigieuses Universités de Paris et Rennes en Parodontologie et Implantologie Orale. Reconnue à Luxembourg pour son approche humaine, son écoute bienveillante et ses soins tout en douceur, le Dr. Hirsch vous accueille personnellement dans un cadre apaisant et moderne afin de répondre à tous vos besoins bucco-dentaires.",
             "team_doc_badge": "Omnipraticienne & Spécialiste",
-            "team_asst_name": "Assistante Dentaire Qualifiée",
-            "team_asst_role": "Accueil, Hygiène & Assistance au Fauteuil",
-            "team_asst_bio": "Assure un accueil souriant et rassurant, veille au respect strict des protocoles de stérilisation hospitalière et assiste le praticien au fauteuil pour votre plus grand confort.",
-            "team_asst_badge": "Asepsie & Confort Patient",
             "diplomas_title": "Diplômes & Qualifications Universitaires du Dr. Shandy Hirsch",
             "languages_label": "Langues parlées au cabinet :",
             "team_cta": "Prendre RDV avec le Dr. Hirsch sur Doctena",
 
             "val_tag": "Technologie & Équipements",
             "val_title": "Un Plateau Technique de <span class=\"text-highlighted\">Dernière Génération</span>",
-            "val_subtitle": "Le cabinet dentaire du Dr. Hirsch investit continuellement dans des équipements médicaux de pointe allemands pour garantir des soins précis, pérennes et d'un confort absolu.",
-            "val_1_title": "Fauteuil Dentsply Sirona Sinius",
-            "val_1_desc": "Centre de traitement ergonomique allemand haut de gamme, intégrant des technologies avancées pour un confort patient inégalé pendant les séances de soins et chirurgies.",
-            "val_2_title": "Loupes Chirurgicales Orascoptic",
-            "val_2_desc": "Grossissement optique chirurgical de haute précision permettant d'effectuer des micro-gestes ultra-conservateurs et d'optimiser l'intégration des implants dentaires.",
+            "val_subtitle": "Le cabinet dentaire du Dr. Hirsch investit continuellement dans des équipements médicaux de pointe pour garantir des soins précis, pérennes et d'un confort absolu.",
+            "val_1_title": "Fauteuil Ergonomique Haute Technologie",
+            "val_1_desc": "Centre de traitement ergonomique haut de gamme, intégrant des technologies avancées pour un confort patient inégalé pendant les séances de soins et chirurgies.",
+            "val_2_title": "Aides Optiques & Micro-Chirurgie",
+            "val_2_desc": "Grossissement optique chirurgical de haute précision permettant d'effectuer des micro-gestes ultra-conservateurs et d'optimiser les soins.",
             "val_3_title": "Radiographie Numérique HD Basse Dose",
             "val_3_desc": "Capteurs numériques instantanés offrant une netteté radiologique exceptionnelle tout en réduisant drastiquement l'exposition aux rayons X pour votre sécurité.",
             "val_4_title": "Stérilisation Hospitalière Classe B",
@@ -129,7 +137,7 @@
             "faq_q3": "Comment accéder au cabinet en transports publics ou voiture ?",
             "faq_a3": "<strong>Adresse :</strong> 12, rue William Turner, L-2634 Luxembourg (Quartier de Bonnevoie).<br/><strong>Par bus (à proximité immédiate) :</strong><br/>• <strong>Ligne 2 :</strong> arrêt Demy Schlechter (à 1 minute à pied)<br/>• <strong>Ligne 7 :</strong> arrêt Vannérus – Wisestrooss (à 2 minutes à pied)<br/>• <strong>Ligne 29 :</strong> arrêt Hippodrome (à 3 minutes à pied)<br/>À seulement 5 minutes de la <strong>Gare Centrale de Luxembourg</strong> et de la ligne de <strong>Tramway T1</strong>.<br/>Horaires et correspondances sur <a href=\"https://www.mobiliteit.lu/fr/\" target=\"_blank\" rel=\"noopener\" style=\"color:#be185d; text-decoration:underline;\">www.mobiliteit.lu</a>.",
             "faq_q4": "Quelles langues sont parlées au sein du cabinet ?",
-            "faq_a4": "Le Docteur Shandy Hirsch et son équipe vous accueillent couramment en <strong>Français</strong>, <strong>Anglais</strong> (English), <strong>Roumain</strong> (Română), <strong>Espagnol</strong> (Español), et <strong>Luxembourgeois</strong> (Lëtzebuergesch - en cours d'apprentissage).",
+            "faq_a4": "Le Docteur Shandy Hirsch vous accueille couramment en <strong>Français</strong>, <strong>Anglais</strong> (English), et <strong>Roumain</strong> (Română).",
             "faq_q5": "Comment prendre rendez-vous au cabinet ?",
             "faq_a5": "La prise de rendez-vous s'effectue facilement et à tout moment en ligne via la plateforme <a href=\"https://www.doctena.lu/fr/cabinet/dr_shandy_hirsch_obouta_landry-425311\" target=\"_blank\" rel=\"noopener\" style=\"color:#be185d; text-decoration:underline;\"><strong>Doctena</strong></a>, ou par téléphone auprès de notre secrétariat au <strong>+352 20 28 75 54</strong>.",
 
@@ -172,23 +180,32 @@
             "hero_cta_call": "📞 +352 20 28 75 54",
             
             "lead_head": "Request a Fast Callback",
-            "lead_sub": "Leave your details, our dental team will call you back promptly.",
+            "lead_sub": "Leave your details or book your appointment directly on Doctena.",
             "lead_ph_name": "Your Full Name",
             "lead_ph_phone": "Phone Number (+352...)",
-            "lead_btn": "Request Callback",
-            "lead_note": "Cabinet Dentaire Dr. Shandy Hirsch • 12, rue William Turner",
+            "lead_btn": "Book Visit (Doctena)",
+            "lead_note": "📞 Direct call: <a href=\"tel:+35220287554\" style=\"color:#be185d; font-weight:700; text-decoration:underline;\">+352 20 28 75 54</a>",
             "lead_success_title": "Thank you!",
-            "lead_success_sub": "Our team will get in touch with you shortly.",
+            "lead_success_sub": "Redirecting to Dr. Hirsch's Doctena booking page...",
+
+            "info_1_title": "Online Appointments",
+            "info_1_desc": "Book 24/7 directly on Doctena →",
+            "info_2_title": "Emergency & Contact",
+            "info_3_title": "Opening Hours",
+            "info_3_hours1": "Mon – Thu: 8:30 – 17:30",
+            "info_3_hours2": "Fri: 8:30 – 12:30",
+            "info_3_hours3": "Sat (1x/mo): 9:30 – 14:00",
+            "info_3_hours4": "Sun: CHL Hospital via 112",
 
             "story_tag": "Welcome to the Clinic",
             "story_title": "Warm, Attentive, and <span class=\"text-highlighted\">Stress-Free Dental Care</span>",
-            "story_intro": "Moien! Welcome to Cabinet Dentaire Dr Hirsch in Luxembourg – Bonnevoie. Our clinic is dedicated to delivering personalized, high-quality dental care. Our top priority is helping you achieve optimal oral health in a soothing, comfortable atmosphere.",
+            "story_intro": "Welcome to Cabinet Dentaire Dr. Shandy Hirsch in Luxembourg – Bonnevoie. Our clinic is dedicated to delivering personalized, high-quality dental care. Our top priority is helping you achieve optimal oral health in a soothing, comfortable atmosphere.",
             "story_slide1_title": "Gentle & Anti-Fear Approach",
             "story_slide1_desc": "For anxious patients or those terrified of the dentist, Dr. Hirsch takes all the necessary time with patience, warmth, and gentleness.",
-            "story_slide2_title": "Dentsply Sirona Sinius Treatment Center",
-            "story_slide2_desc": "High-end German medical engineering offering ergonomic support and supreme patient comfort throughout all procedures.",
-            "story_slide3_title": "Microsurgery & Orascoptic Loupes",
-            "story_slide3_desc": "High-resolution optical magnification for microscopic precision in implant surgeries and delicate periodontal treatments.",
+            "story_slide2_title": "High-Tech Ergonomic Dental Chair",
+            "story_slide2_desc": "Modern medical equipment offering optimal ergonomic support and supreme patient comfort throughout all procedures.",
+            "story_slide3_title": "Optical Aids & Microsurgery",
+            "story_slide3_desc": "High-definition optical magnification for microscopic precision in implant surgeries and delicate periodontal treatments.",
             "story_slide4_title": "University Qualified Specialist",
             "story_slide4_desc": "Graduated from prestigious French Universities (Paris & Rennes) with specialized residency in implantology and periodontology.",
             "story_slide5_title": "Dedicated Emergency Care",
@@ -208,27 +225,23 @@
             "srv_4_desc": "Gentle ultrasonic cleaning, comprehensive oral examinations, pathology of oral mucosa (University of Paris), and compassionate pediatric dentistry to build lasting trust.",
             "srv_cta": "Book Visit",
 
-            "team_tag": "Dental Surgeon & Team",
-            "team_title": "Dr. Shandy Hirsch <span class=\"text-highlighted\">& Her Team</span>",
+            "team_tag": "Your Practitioner",
+            "team_title": "Dr. Shandy Hirsch <span class=\"text-highlighted\">Dental Surgeon</span>",
             "team_subtitle": "Caring, personalized treatment with rigorous clinical standards in a modern, welcoming neighborhood clinic in Luxembourg-Bonnevoie.",
             "team_doc_name": "Dr. Shandy Hirsch",
             "team_doc_role": "Dental Surgeon • Practice Founder",
-            "team_doc_bio": "Specialist with advanced University Diplomas from the Universities of Paris and Rennes in Periodontology and Oral Implantology. Celebrated for her gentle touch and empathy towards nervous patients.",
+            "team_doc_bio": "Specialist graduated from the prestigious Universities of Paris and Rennes in Periodontology and Oral Implantology. Celebrated in Luxembourg for her gentle touch, empathy towards nervous patients, and dedication to excellence, Dr. Hirsch welcomes you personally in a serene, modern clinic.",
             "team_doc_badge": "General Practitioner & Specialist",
-            "team_asst_name": "Qualified Dental Assistant",
-            "team_asst_role": "Reception, Sterilization & Chairside Assistance",
-            "team_asst_bio": "Provides a warm welcome, enforces strict hospital-grade sterilization protocols (Class B autoclave), and assists chairside for seamless patient comfort.",
-            "team_asst_badge": "Asepsis & Patient Care",
             "diplomas_title": "Academic Degrees & Certifications of Dr. Shandy Hirsch",
             "languages_label": "Languages spoken at the clinic:",
             "team_cta": "Book with Dr. Hirsch on Doctena",
 
             "val_tag": "Technology & Standards",
             "val_title": "Cutting-Edge <span class=\"text-highlighted\">Medical Equipment</span>",
-            "val_subtitle": "Dr. Hirsch continuously invests in state-of-the-art German clinical technology to ensure precise, durable, and painless dental treatments.",
-            "val_1_title": "Dentsply Sirona Sinius Dental Unit",
-            "val_1_desc": "Premium German ergonomic treatment center offering maximum comfort and relaxation during all dental checkups and surgical procedures.",
-            "val_2_title": "Orascoptic Surgical Loupes",
+            "val_subtitle": "Dr. Hirsch continuously invests in state-of-the-art clinical technology to ensure precise, durable, and painless dental treatments.",
+            "val_1_title": "High-Tech Ergonomic Dental Chair",
+            "val_1_desc": "Premium ergonomic treatment center offering maximum comfort and relaxation during all dental checkups and surgical procedures.",
+            "val_2_title": "Optical Aids & Microsurgery",
             "val_2_desc": "High-definition surgical magnification allowing micro-invasive techniques and optimal integration of dental implants.",
             "val_3_title": "Low-Dose Digital HD Radiography",
             "val_3_desc": "Instant digital radiography providing crystal-clear imaging while drastically reducing radiation exposure for patient safety.",
@@ -279,7 +292,7 @@
             "faq_q3": "How can I reach the clinic by public transport or car?",
             "faq_a3": "<strong>Address:</strong> 12, rue William Turner, L-2634 Luxembourg (Bonnevoie district).<br/><strong>By bus (very close proximity):</strong><br/>• <strong>Bus Line 2:</strong> Stop Demy Schlechter (1 min walk)<br/>• <strong>Bus Line 7:</strong> Stop Vannérus – Wisestrooss (2 min walk)<br/>• <strong>Bus Line 29:</strong> Stop Hippodrome (3 min walk)<br/>Only 5 minutes away from <strong>Luxembourg Central Station (Gare Centrale)</strong> and the <strong>T1 Tramway</strong> line.<br/>Timetables and connections at <a href=\"https://www.mobiliteit.lu/en/\" target=\"_blank\" rel=\"noopener\" style=\"color:#be185d; text-decoration:underline;\">www.mobiliteit.lu</a>.",
             "faq_q4": "Which languages are spoken at the clinic?",
-            "faq_a4": "Dr. Shandy Hirsch and her team fluently welcome patients in <strong>French</strong>, <strong>English</strong>, <strong>Romanian</strong> (Română), <strong>Spanish</strong> (Español), and <strong>Luxembourgish</strong> (Lëtzebuergesch - currently learning).",
+            "faq_a4": "Dr. Shandy Hirsch fluently welcomes you in <strong>French</strong>, <strong>English</strong>, and <strong>Romanian</strong> (Română).",
             "faq_q5": "How can I book an appointment?",
             "faq_a5": "You can book easily 24/7 online via <a href=\"https://www.doctena.lu/fr/cabinet/dr_shandy_hirsch_obouta_landry-425311\" target=\"_blank\" rel=\"noopener\" style=\"color:#be185d; text-decoration:underline;\"><strong>Doctena</strong></a>, or by calling our clinic directly at <strong>+352 20 28 75 54</strong>.",
 
@@ -307,19 +320,26 @@
         }
     };
 
-    // Default language is French (1st language)
+    // Primary Default language is FRENCH (fr)
+    // Clear old localStorage key to guarantee French on starting
     var currentLang = 'fr';
     try {
-        var saved = localStorage.getItem('hirsch_lang');
-        if (saved && (saved === 'fr' || saved === 'en')) {
-            currentLang = saved;
+        var saved = localStorage.getItem('dr_hirsch_lang_v2');
+        if (saved === 'en') {
+            currentLang = 'en';
+        } else {
+            currentLang = 'fr';
+            localStorage.setItem('dr_hirsch_lang_v2', 'fr');
         }
-    } catch(e) {}
+    } catch(e) {
+        currentLang = 'fr';
+    }
 
     function applyLanguage(lang) {
+        if (lang !== 'fr' && lang !== 'en') lang = 'fr';
         currentLang = lang;
         try {
-            localStorage.setItem('hirsch_lang', lang);
+            localStorage.setItem('dr_hirsch_lang_v2', lang);
         } catch(e) {}
 
         var dict = translations[lang] || translations.fr;
@@ -343,44 +363,45 @@
             }
         });
 
-        // 3. Update buttons active visual state
+        // 3. Update active visual pill highlight smoothly
         var buttons = document.querySelectorAll('.lang-btn');
         buttons.forEach(function(btn) {
             var btnLang = btn.getAttribute('data-lang');
             if (btnLang === lang) {
                 btn.classList.add('is-active');
-                btn.style.background = '#be185d';
-                btn.style.color = '#ffffff';
+                btn.style.setProperty('background', '#be185d', 'important');
+                btn.style.setProperty('color', '#ffffff', 'important');
+                btn.style.setProperty('box-shadow', '0 2px 8px rgba(190,24,93,0.35)', 'important');
             } else {
                 btn.classList.remove('is-active');
-                btn.style.background = 'transparent';
-                btn.style.color = '#475569';
+                btn.style.setProperty('background', 'transparent', 'important');
+                btn.style.setProperty('color', '#475569', 'important');
+                btn.style.setProperty('box-shadow', 'none', 'important');
             }
         });
     }
 
-    function initLanguageSwitcher() {
-        var buttons = document.querySelectorAll('.lang-btn');
-        buttons.forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                var targetLang = this.getAttribute('data-lang');
-                if (targetLang) {
-                    applyLanguage(targetLang);
-                }
-            });
-        });
+    // Global click delegation for language switcher (works on desktop & mobile)
+    document.addEventListener('click', function(e) {
+        var btn = e.target.closest('.lang-btn');
+        if (!btn) return;
+        e.preventDefault();
+        var targetLang = btn.getAttribute('data-lang');
+        if (targetLang && targetLang !== currentLang) {
+            applyLanguage(targetLang);
+        }
+    });
 
-        // Apply on load
-        applyLanguage(currentLang);
-    }
-
+    // Run on ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+        document.addEventListener('DOMContentLoaded', function() {
+            applyLanguage(currentLang);
+        });
     } else {
-        initLanguageSwitcher();
+        applyLanguage(currentLang);
     }
 
     // Expose globally
     window.hirschSetLanguage = applyLanguage;
+    window.hirschCurrentLanguage = function() { return currentLang; };
 })();

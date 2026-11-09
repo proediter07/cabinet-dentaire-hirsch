@@ -145,13 +145,15 @@
                                             </a>
                                         </div>
                                     </div>
-                                </nav>
-                            </div>
-                        </nav>
+                                                                                </nav>
                         <div class="navbar-button_wrapper">
-    <div class="lang-switch-wrap" style="display:inline-flex; align-items:center; background:#f1f5f9; border-radius:24px; padding:3px; margin:0 12px; border:1px solid #e2e8f0;">
-        <button type="button" class="lang-btn is-active" data-lang="en" style="background:#be185d; color:#fff; border:none; border-radius:18px; padding:4px 10px; font-size:12px; font-weight:700; cursor:pointer; transition:all 0.2s;">EN</button>
-        <button type="button" class="lang-btn" data-lang="fr" style="background:transparent; color:#475569; border:none; border-radius:18px; padding:4px 10px; font-size:12px; font-weight:700; cursor:pointer; transition:all 0.2s;">FR</button>
+    <div class="lang-switch-wrap" style="display:inline-flex; align-items:center; background:#f1f5f9; border-radius:24px; padding:3px; margin:0 8px; border:1px solid #cbd5e1; box-shadow:0 1px 3px rgba(0,0,0,0.05); vertical-align:middle;">
+        <button type="button" class="lang-btn is-active" data-lang="fr" style="background:#be185d; color:#ffffff; border:none; border-radius:18px; padding:5px 12px; font-size:12px; font-weight:700; cursor:pointer; transition:all 0.2s cubic-bezier(0.4,0,0.2,1); display:inline-flex; align-items:center; gap:4px; box-shadow:0 2px 6px rgba(190,24,93,0.35);">
+            <span>🇫🇷</span> <span>FR</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" style="background:transparent; color:#475569; border:none; border-radius:18px; padding:5px 12px; font-size:12px; font-weight:700; cursor:pointer; transition:all 0.2s cubic-bezier(0.4,0,0.2,1); display:inline-flex; align-items:center; gap:4px;">
+            <span>🇬🇧</span> <span>EN</span>
+        </button>
     </div>
     
                             <div class="navbar_button hide-mobile">
@@ -159,7 +161,7 @@
                                     <a data-wf--button-primary--variant="light-small" href="https://www.doctena.lu/fr/cabinet/dr_shandy_hirsch_obouta_landry-425311" class="button_primary w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951 w-inline-block">
                                         <div class="button_inner">
                                             <div class="button-text_wrap">
-                                                <div class="button_text">Get Appointment</div>
+                                                <div class="button_text" data-i18n="nav_btn_book">Prendre RDV (Doctena)</div>
                                             </div>
                                             <div class="button-icon_group w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951">
                                                 <div class="button-icon_wrap w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951">
@@ -1740,7 +1742,7 @@
                                 <a data-wf--button-primary--variant="light" href="https://www.doctena.lu/fr/cabinet/dr_shandy_hirsch_obouta_landry-425311" class="button_primary w-variant-62db4792-8717-dbe8-e811-0d36eb02f9ec w-inline-block">
                                     <div class="button_inner">
                                         <div class="button-text_wrap">
-                                            <div class="button_text">Get Appointment</div>
+                                            <div class="button_text" data-i18n="nav_btn_book">Prendre RDV (Doctena)</div>
                                         </div>
                                         <div class="button-icon_group w-variant-62db4792-8717-dbe8-e811-0d36eb02f9ec">
                                             <div class="button-icon_wrap">
@@ -1903,8 +1905,8 @@
                 }
                 );
             }
-        </script>"
-".        <script>
+        </script>
+        <script>
             /* Dr. Hirsch reveal engine v2, fade/slide reveals (NO blur) replacing the
                Webflow IX2 reveals that no longer fire. Bulletproof: a safety net forces
                any element still hidden to show, so text/images never stay invisible. */
@@ -1957,7 +1959,7 @@
                 var phone=(f.querySelector('input[name="phone"]').value||'').trim();
                 if(!name||!phone){return false;}
                 var msg=encodeURIComponent("Hi Cabinet Dentaire Dr. Shandy Hirsch, I'm "+name+". Please call me back at "+phone+" for a dental appointment.");
-                try{ window.open("https://wa.me/35220287554?text="+msg,"_blank"); }catch(_){}
+                try{ window.open("https://www.doctena.lu/fr/cabinet/dr_shandy_hirsch_obouta_landry-425311", "_blank"); }catch(_){}
                 var card=f.closest('.lead-form_card');
                 if(card){
                     f.style.display='none';

@@ -30,7 +30,7 @@
             "feature_gentle_desc": "Terrified of the dentist? Dr. Hirsch is celebrated for her gentle touch, active listening, and calm atmosphere.",
             
             "feature_tech_title": "German Precision Equipment",
-            "feature_tech_desc": "High-end Dentsply Sirona Sinius dental treatment center and Orascoptic surgical loupes for microscopic precision.",
+            "feature_tech_desc": "High-end Fauteuil Ergonomique Haute Technologie dental treatment center and Haute Précision surgical loupes for microscopic precision.",
             
             "feature_implant_title": "Oral Implantology & Periodontics",
             "feature_implant_desc": "University of Rennes 2-year hospital surgical residency training. Specialized in tooth replacement and gum health.",
@@ -99,7 +99,7 @@
             "feature_gentle_desc": "Appréhendez-vous le dentiste ? Le Dr. Hirsch est réputée pour sa douceur, son écoute bienveillante et son approche apaisante.",
             
             "feature_tech_title": "Plateau Technique de Pointe",
-            "feature_tech_desc": "Unité de soins haute technologie Dentsply Sirona Sinius et loupes chirurgicales Orascoptic pour une précision microscopique.",
+            "feature_tech_desc": "Unité de soins haute technologie Fauteuil Ergonomique Haute Technologie et loupes chirurgicales Haute Précision pour une précision microscopique.",
             
             "feature_implant_title": "Implantologie & Parodontologie",
             "feature_implant_desc": "Diplômée d'un D.U. d'Implantologie de 2 ans au CHU de Rennes et de certificats en parodontologie de l'Université de Paris.",

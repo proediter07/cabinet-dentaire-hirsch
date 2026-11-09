@@ -68,13 +68,15 @@
                             <a href="index.html#acces" class="navbar_link w-inline-block">
                                 <div><span data-i18n="nav_contact">Accès &amp; Transports</span></div>
                             </a>
-                        </nav>
-                            </div>
-                        </nav>
+                                                                        </nav>
                         <div class="navbar-button_wrapper">
-    <div class="lang-switch-wrap" style="display:inline-flex; align-items:center; background:#f1f5f9; border-radius:24px; padding:3px; margin:0 12px; border:1px solid #e2e8f0;">
-        <button type="button" class="lang-btn is-active" data-lang="en" style="background:#be185d; color:#fff; border:none; border-radius:18px; padding:4px 10px; font-size:12px; font-weight:700; cursor:pointer; transition:all 0.2s;">EN</button>
-        <button type="button" class="lang-btn" data-lang="fr" style="background:transparent; color:#475569; border:none; border-radius:18px; padding:4px 10px; font-size:12px; font-weight:700; cursor:pointer; transition:all 0.2s;">FR</button>
+    <div class="lang-switch-wrap" style="display:inline-flex; align-items:center; background:#f1f5f9; border-radius:24px; padding:3px; margin:0 8px; border:1px solid #cbd5e1; box-shadow:0 1px 3px rgba(0,0,0,0.05); vertical-align:middle;">
+        <button type="button" class="lang-btn is-active" data-lang="fr" style="background:#be185d; color:#ffffff; border:none; border-radius:18px; padding:5px 12px; font-size:12px; font-weight:700; cursor:pointer; transition:all 0.2s cubic-bezier(0.4,0,0.2,1); display:inline-flex; align-items:center; gap:4px; box-shadow:0 2px 6px rgba(190,24,93,0.35);">
+            <span>🇫🇷</span> <span>FR</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" style="background:transparent; color:#475569; border:none; border-radius:18px; padding:5px 12px; font-size:12px; font-weight:700; cursor:pointer; transition:all 0.2s cubic-bezier(0.4,0,0.2,1); display:inline-flex; align-items:center; gap:4px;">
+            <span>🇬🇧</span> <span>EN</span>
+        </button>
     </div>
     
                             <div class="navbar_button hide-mobile">
@@ -82,7 +84,7 @@
                                     <a data-wf--button-primary--variant="light-small" href="https://www.doctena.lu/fr/cabinet/dr_shandy_hirsch_obouta_landry-425311" class="button_primary w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951 w-inline-block">
                                         <div class="button_inner">
                                             <div class="button-text_wrap">
-                                                <div class="button_text">Get Appointment</div>
+                                                <div class="button_text" data-i18n="nav_btn_book">Prendre RDV (Doctena)</div>
                                             </div>
                                             <div class="button-icon_group w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951">
                                                 <div class="button-icon_wrap w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951">
@@ -324,37 +326,40 @@
                                                         <path d="M12 5.45455H7.31455L10.6255 2.14364L9.85636 1.37455L6.54545 4.68545V0H5.45455V4.68545L2.14364 1.37455L1.37455 2.14364L4.68545 5.45455H0V6.54545H4.68545L1.37455 9.85636L2.14364 10.6255L5.45455 7.31455V12H6.54545V7.31455L9.85636 10.6255L10.6255 9.85636L7.31455 6.54545H12V5.45455Z" fill="currentColor"></path>
                                                     </svg>
                                                 </div>
-                                                <div data-i18n="team_tag">Médecin-Dentiste &amp; Équipe</div>
+                                                <div data-i18n="team_tag">Votre Praticienne</div>
                                             </div>
                                         </div>
-                                        <h2 data-i18n="team_title">Docteur Shandy Hirsch <span class="text-highlighted">&amp; Son Équipe</span></h2>
+                                        <h2 data-i18n="team_title">Docteur Shandy Hirsch <span class="text-highlighted">Chirurgien-Dentiste</span></h2>
                                     </div>
                                     <div class="about-team_para-wrap">
                                         <p class="about-team_para" data-i18n="team_subtitle">Une prise en charge personnalisée et attentive dans notre cabinet à Luxembourg-Bonnevoie.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:32px; max-width:960px; margin:0 auto 40px;">
-                                <!-- Dr. Hirsch -->
-                                <div style="background:#ffffff; border-radius:24px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.06); border:1px solid #f1f5f9; text-align:center;">
-                                    <div style="width:100%; height:320px; border-radius:18px; overflow:hidden; margin-bottom:20px;">
-                                        <img src="assets/img/dr-shandy-hirsch-portrait.jpg" alt="Docteur Shandy Hirsch" style="width:100%; height:100%; object-fit:cover; object-position:top;" />
+                                                        <div class="margin-bottom margin-40px">
+                                <div style="max-width:960px; margin:0 auto; background:#ffffff; border-radius:28px; padding:32px; box-shadow:0 10px 30px rgba(0,0,0,0.06); border:1px solid #e2e8f0; display:flex; flex-wrap:wrap; gap:36px; align-items:center;">
+                                    <div style="flex:1 1 280px; max-width:320px; margin:0 auto; border-radius:20px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.08); position:relative;">
+                                        <img src="assets/img/dr-shandy-hirsch-portrait.jpg" alt="Docteur Shandy Hirsch" style="width:100%; height:360px; object-fit:cover; object-position:top; display:block;" />
+                                        <div style="position:absolute; bottom:14px; left:14px; right:14px; background:rgba(15, 23, 42, 0.88); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); padding:8px 12px; border-radius:12px; color:#ffffff; text-align:center;">
+                                            <div style="font-weight:700; font-size:13px; color:#f472b6;">⭐ Note Google 5.0 / 5.0</div>
+                                            <div style="font-size:11px; opacity:0.85;">Praticienne Réputée • Bonnevoie</div>
+                                        </div>
                                     </div>
-                                    <h3 style="font-size:22px; margin:0 0 6px 0; color:#0f172a;" data-i18n="team_doc_name">Dr. Shandy Hirsch</h3>
-                                    <div style="color:#be185d; font-weight:700; font-size:14px; margin-bottom:12px;" data-i18n="team_doc_role">Chirurgien-Dentiste • Fondatrice</div>
-                                    <p style="font-size:14px; line-height:1.6; color:#64748b; margin-bottom:16px;" data-i18n="team_doc_bio">Spécialiste diplômée des Universités de Paris et Rennes en Parodontologie et Implantologie Orale. Réputée pour sa douceur et son écoute des patients anxieux.</p>
-                                    <div style="display:inline-block; background:rgba(190,24,93,0.08); color:#be185d; padding:6px 14px; border-radius:12px; font-size:12px; font-weight:700;" data-i18n="team_doc_badge">Omnipraticienne &amp; Spécialiste</div>
-                                </div>
-                                <!-- Assistant -->
-                                <div style="background:#ffffff; border-radius:24px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.06); border:1px solid #f1f5f9; text-align:center;">
-                                    <div style="width:100%; height:320px; border-radius:18px; overflow:hidden; margin-bottom:20px;">
-                                        <img src="assets/img/assistant-portrait.jpg" alt="Assistante Dentaire Qualifiée" style="width:100%; height:100%; object-fit:cover; object-position:top;" />
+                                    <div style="flex:1 1 420px; text-align:left;">
+                                        <div style="display:inline-block; background:rgba(190,24,93,0.08); color:#be185d; padding:6px 14px; border-radius:12px; font-size:12px; font-weight:700; margin-bottom:12px;" data-i18n="team_doc_badge">Omnipraticienne &amp; Spécialiste</div>
+                                        <h3 style="font-size:28px; margin:0 0 6px 0; color:#0f172a;" data-i18n="team_doc_name">Dr. Shandy Hirsch</h3>
+                                        <div style="color:#be185d; font-weight:700; font-size:16px; margin-bottom:16px;" data-i18n="team_doc_role">Chirurgien-Dentiste • Fondatrice du Cabinet</div>
+                                        <p style="font-size:15px; line-height:1.7; color:#475569; margin-bottom:20px;" data-i18n="team_doc_bio">
+                                            Spécialiste diplômée des prestigieuses Universités de Paris et Rennes en Parodontologie et Implantologie Orale. Reconnue à Luxembourg pour son approche humaine, son écoute bienveillante et ses soins tout en douceur, le Dr. Hirsch vous accueille personnellement dans un cadre apaisant et moderne afin de répondre à tous vos besoins bucco-dentaires.
+                                        </p>
+                                        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px;">
+                                            <span style="background:#f1f5f9; color:#334155; padding:6px 14px; border-radius:14px; font-size:13px; font-weight:600;">🎓 D.U. Implantologie (CHU Rennes)</span>
+                                            <span style="background:#f1f5f9; color:#334155; padding:6px 14px; border-radius:14px; font-size:13px; font-weight:600;">🦷 C.E.S. Parodontologie (Université de Paris)</span>
+                                            <span style="background:#f1f5f9; color:#334155; padding:6px 14px; border-radius:14px; font-size:13px; font-weight:600;">✨ Esthétique du Sourire (Académie du Sourire)</span>
+                                        </div>
                                     </div>
-                                    <h3 style="font-size:22px; margin:0 0 6px 0; color:#0f172a;" data-i18n="team_asst_name">Assistante Dentaire Qualifiée</h3>
-                                    <div style="color:#0d9488; font-weight:700; font-size:14px; margin-bottom:12px;" data-i18n="team_asst_role">Accueil, Hygiène &amp; Assistance au Fauteuil</div>
-                                    <p style="font-size:14px; line-height:1.6; color:#64748b; margin-bottom:16px;" data-i18n="team_asst_bio">Assure un accueil souriant et rassurant, veille au respect strict des protocoles de stérilisation hospitalière et assiste le praticien au fauteuil.</p>
-                                    <div style="display:inline-block; background:rgba(13,148,136,0.08); color:#0d9488; padding:6px 14px; border-radius:12px; font-size:12px; font-weight:700;" data-i18n="team_asst_badge">Asepsie &amp; Confort Patient</div>
                                 </div>
+                            </div>
                             </div>
 
                             <!-- Diplômes Universitaires -->
@@ -406,8 +411,6 @@
                                         <span style="background:#e0f2fe; color:#0369a1; padding:4px 12px; border-radius:16px; font-size:13px; font-weight:600;">🇫🇷 Français</span>
                                         <span style="background:#e0f2fe; color:#0369a1; padding:4px 12px; border-radius:16px; font-size:13px; font-weight:600;">🇬🇧 English</span>
                                         <span style="background:#e0f2fe; color:#0369a1; padding:4px 12px; border-radius:16px; font-size:13px; font-weight:600;">🇷🇴 Română</span>
-                                        <span style="background:#e0f2fe; color:#0369a1; padding:4px 12px; border-radius:16px; font-size:13px; font-weight:600;">🇪🇸 Español</span>
-                                        <span style="background:#fef3c7; color:#b45309; padding:4px 12px; border-radius:16px; font-size:13px; font-weight:600;">🇱🇺 Lëtzebuergesch <small>(en cours)</small></span>
                                     </div>
                                 </div>
                             </div>
@@ -1215,7 +1218,7 @@
                                 <a data-wf--button-primary--variant="light" href="https://www.doctena.lu/fr/cabinet/dr_shandy_hirsch_obouta_landry-425311" class="button_primary w-variant-62db4792-8717-dbe8-e811-0d36eb02f9ec w-inline-block">
                                     <div class="button_inner">
                                         <div class="button-text_wrap">
-                                            <div class="button_text">Get Appointment</div>
+                                            <div class="button_text" data-i18n="nav_btn_book">Prendre RDV (Doctena)</div>
                                         </div>
                                         <div class="button-icon_group w-variant-62db4792-8717-dbe8-e811-0d36eb02f9ec">
                                             <div class="button-icon_wrap">
@@ -1378,8 +1381,8 @@
                 }
                 );
             }
-        </script>"
-".        <script>
+        </script>
+        <script>
             /* Dr. Hirsch reveal engine v2, fade/slide reveals (NO blur) replacing the
                Webflow IX2 reveals that no longer fire. Bulletproof: a safety net forces
                any element still hidden to show, so text/images never stay invisible. */
