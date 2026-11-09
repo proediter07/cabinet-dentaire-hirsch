@@ -118,8 +118,8 @@
                 </div>
             </div>
             <main class="main-wrapper">
-                <header class="section_hero is-home-hero">
-                    <div class="section-padding padding-home-hero">
+                <header class="section_hero is-home-hero" style="position:relative; overflow:hidden; background-color:#011f23;">
+                    <div class="section-padding padding-home-hero" style="position:relative; z-index:3;">
                         <div class="container">
                             <div class="section_component">
                                 <div class="home-hero_content">
@@ -150,12 +150,8 @@
                                             </div>
                                         </a>
                                     </div>
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-w-id="4a010508-9584-456a-0d04-e7cbb6c6bb4f" class="our-info_wrap">
+                                <div data-w-id="4a010508-9584-456a-0d04-e7cbb6c6bb4f" class="our-info_wrap">
                         <div class="section-padding" style="padding-top:20px; padding-bottom:30px;">
                             <div class="container">
                                 <div class="section_component">
@@ -237,12 +233,17 @@
                             </div>
                         </div>
                     </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="hero_overlay-wrap">
                         <div class="hero_overlay is-gradient"></div>
                     </div>
                     <div data-w-id="e790d2ce-f71a-82ed-935b-8c0db2fa91f1" class="hero-image_wrap">
                         <img src="assets/img/gen_dentist-examining-patients-teeth-close-up_1.jpg" loading="lazy" sizes="(max-width: 2880px) 100vw, 2880px" srcset="assets/img/gen_dentist-examining-patients-teeth-close-up_1.jpg 500w, assets/img/gen_dentist-examining-patients-teeth-close-up_1.jpg 800w, assets/img/gen_dentist-examining-patients-teeth-close-up_1.jpg 1080w, assets/img/gen_dentist-examining-patients-teeth-close-up_1.jpg 1600w, assets/img/gen_dentist-examining-patients-teeth-close-up_1.jpg 2000w, assets/img/gen_dentist-examining-patients-teeth-close-up_1.jpg 2600w, assets/img/gen_dentist-examining-patients-teeth-close-up_1.jpg 2880w" alt="Home hero image" class="home-hero_image hide-on-mobile hero-carousel-img is-active"/>
-                        <img src="assets/img/gen_hero-2.jpg" loading="lazy" alt="" class="home-hero_image hide-on-mobile hero-carousel-img"/><img src="assets/img/gen_hero-3.jpg" loading="lazy" alt="" class="home-hero_image hide-on-mobile hero-carousel-img"/><img src="assets/img/gen_hero-4.jpg" loading="lazy" alt="" class="home-hero_image hide-on-mobile hero-carousel-img"/>
+                        <img src="assets/img/gen_hero-2.jpg" loading="lazy" alt="" class="home-hero_image hide-on-mobile hero-carousel-img"/>
+                        <img src="assets/img/gen_hero-3.jpg" loading="lazy" alt="" class="home-hero_image hide-on-mobile hero-carousel-img"/>
+                        <img src="assets/img/gen_hero-4.jpg" loading="lazy" alt="" class="home-hero_image hide-on-mobile hero-carousel-img"/>
                     </div>
                 </header>
                 <section class="section_story" id="presentation">
@@ -1394,12 +1395,22 @@
 
     
         <script>
-            /* Dr. Hirsch Interactive Services Switcher */
+            /* Dr. Hirsch Interactive Services Switcher (with Accordion Toggle) */
             function switchService(idx) {
                 var items = document.querySelectorAll('.service-showcase_item');
                 var slides = document.querySelectorAll('.service-showcase_slide');
-                if (!items.length) return;
+                if (!items.length || !items[idx]) return;
 
+                var isAlreadyActive = items[idx].classList.contains('is-active');
+
+                // If user clicks the currently active card, toggle it closed!
+                if (isAlreadyActive) {
+                    items[idx].classList.remove('is-active');
+                    if (slides[idx]) slides[idx].classList.remove('is-active');
+                    return;
+                }
+
+                // Otherwise, open this one and close others
                 items.forEach(function(item, i) {
                     if (i === idx) {
                         item.classList.add('is-active');

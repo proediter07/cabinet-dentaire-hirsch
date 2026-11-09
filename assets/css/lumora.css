@@ -9576,3 +9576,137 @@ html, body {
     font-size: 11px !important;
   }
 }
+
+
+/* ========================================================
+   HIGH CONTRAST & MOBILE SPACING GUARANTEE
+   Ensures zero dark overlay bleeding, crystal-clear text,
+   and elegant proportional spacing across all devices.
+   ======================================================== */
+
+/* Prevent hero background elements from escaping the hero header */
+.section_hero.is-home-hero {
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #011f23 !important;
+}
+
+.section_hero.is-home-hero .hero_overlay-wrap,
+.section_hero.is-home-hero .hero-image_wrap {
+  position: absolute !important;
+  inset: 0 !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  width: 100% !important;
+}
+
+/* Story / Bienvenue Section */
+.section_story {
+  background-color: #ffffff !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.section_story .story_title,
+.section_story h2 {
+  color: #0f172a !important;
+}
+
+.section_story p {
+  color: #334155 !important;
+}
+
+.story-slider_card {
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.story-slider_title {
+  color: #0f172a !important;
+}
+
+.story-slider_content p {
+  color: #475569 !important;
+}
+
+/* Service Showcase Section */
+.section_service {
+  background-color: #f8fafc !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.section_service h2 {
+  color: #0f172a !important;
+}
+
+.section_service p {
+  color: #334155 !important;
+}
+
+/* Team / Praticienne Section */
+.section_team.is-home {
+  background-color: #edf6f7 !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Value / Equipements Section */
+.section_value {
+  background-color: #ffffff !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.section_value h2 {
+  color: #0f172a !important;
+}
+
+.section_value p {
+  color: #334155 !important;
+}
+
+.tabs-accordion_header {
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.tabs-accordion_header-title {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+.tabs-accordion_header-icon {
+  color: #0d9488 !important;
+}
+
+.tabs-accordion_info-inner p {
+  color: #334155 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+/* Mobile Service Card Compact Image & Spacing */
+@media (max-width: 991px) {
+  .section-padding.padding-120x120 {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  .section-padding.padding-0x120 {
+    padding-top: 24px !important;
+    padding-bottom: 48px !important;
+  }
+  .section-padding.padding-100x100 {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+  .service-showcase_mobile-img img {
+    height: 180px !important;
+    max-height: 190px !important;
+    border-radius: 12px !important;
+  }
+  .service-showcase_desc {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    color: #334155 !important;
+  }
+}
