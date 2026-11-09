@@ -1,20 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="245" height="40" viewBox="0 0 245 40" fill="none" role="img" aria-label="Cabinet Dentaire Dr. Shandy Hirsch">
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="42" viewBox="0 0 260 42" fill="none" role="img" aria-label="Cabinet Dentaire Dr. Shandy Hirsch">
   <defs>
-    <linearGradient id="hirsch-grad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+    <linearGradient id="hirsch-grad-gold" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#be185d"/>
-      <stop offset="100%" stop-color="#db2777"/>
+      <stop offset="50%" stop-color="#db2777"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
     </linearGradient>
-    <filter id="logo-text-shadow" x="-10%" y="-20%" width="130%" height="150%">
-      <feDropShadow dx="0" dy="1.2" stdDeviation="1.2" flood-color="#000000" flood-opacity="0.45"/>
+    <filter id="logo-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.4"/>
     </filter>
   </defs>
-  <!-- Tooth / Smile Emblem -->
-  <g transform="translate(2, 3)">
-    <rect width="34" height="34" rx="10" fill="url(#hirsch-grad)"/>
+  <g transform="translate(3, 4)">
+    <rect width="34" height="34" rx="10" fill="url(#hirsch-grad-gold)"/>
     <path d="M17 7C14.5 7 12.8 8.2 12.2 10.2C11.5 12.5 11 15 11.5 18C12 21 13 25 14.5 25C15.8 25 16.2 23 17 21C17.8 23 18.2 25 19.5 25C21 25 22 21 22.5 18C23 15 22.5 12.5 21.8 10.2C21.2 8.2 19.5 7 17 7Z" fill="white" stroke="white" stroke-width="0.8" stroke-linejoin="round"/>
     <circle cx="23" cy="9" r="1.5" fill="#fef08a"/>
   </g>
-  <!-- Text Brand: Crisp Brilliant White & Rose Gold for Ultra-Legibility -->
-  <text x="44" y="20.5" fill="#ffffff" filter="url(#logo-text-shadow)" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" letter-spacing="-0.3">Dr. Shandy Hirsch</text>
-  <text x="44" y="33" fill="#f472b6" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.8" text-transform="uppercase">Cabinet Dentaire • Luxembourg</text>
+  <text x="46" y="21" fill="#ffffff" filter="url(#logo-shadow)" font-family="'Plus Jakarta Sans', Sora, -apple-system, sans-serif" font-size="16.5" font-weight="800" letter-spacing="-0.3">Dr. Shandy Hirsch</text>
+  <text x="46" y="33.5" fill="#f472b6" font-family="'Plus Jakarta Sans', Sora, -apple-system, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.8" text-transform="uppercase">Cabinet Dentaire • Luxembourg</text>
 </svg>

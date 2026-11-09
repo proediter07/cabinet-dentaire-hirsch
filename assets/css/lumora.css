@@ -9710,3 +9710,139 @@ html, body {
     color: #334155 !important;
   }
 }
+
+
+/* ========================================================
+   ULTRA-PREMIUM LUXURY BRAND LOCKUP & GLOBAL POLISH
+   ======================================================== */
+.navbar_logo {
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+  max-width: none !important;
+  width: auto !important;
+  flex: 0 0 auto !important;
+}
+
+.luxury-brand_lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.luxury-brand_emblem {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.luxury-brand_lockup:hover .luxury-brand_emblem {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(190, 24, 93, 0.4);
+  border-color: rgba(244, 114, 182, 0.5);
+}
+
+.luxury-brand_emblem svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.luxury-brand_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  line-height: 1.15;
+}
+
+.luxury-brand_name {
+  font-family: 'Plus Jakarta Sans', Sora, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 17.5px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: color 0.2s ease;
+}
+
+.luxury-brand_lockup:hover .luxury-brand_name {
+  color: #fdf2f8;
+}
+
+.luxury-brand_subtitle {
+  font-family: 'Plus Jakarta Sans', Sora, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #f472b6;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-top: 3px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar glassmorphism */
+.navbar_wrap {
+  background: rgba(1, 31, 35, 0.92) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Mobile responsive tuning for navbar */
+@media (max-width: 991px) {
+  .navbar_wrap {
+    height: 70px !important;
+  }
+  .navbar_container {
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .navbar_wrap {
+    height: 64px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .luxury-brand_lockup {
+    gap: 8px;
+  }
+  .luxury-brand_emblem {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    padding: 5px;
+  }
+  .luxury-brand_name {
+    font-size: 14.5px !important;
+  }
+  .luxury-brand_subtitle {
+    font-size: 8px !important;
+    letter-spacing: 0.05em !important;
+  }
+  .lang-switch-wrap {
+    margin: 0 2px !important;
+    padding: 2px !important;
+  }
+  .lang-btn {
+    padding: 3px 6px !important;
+    font-size: 10px !important;
+  }
+}
