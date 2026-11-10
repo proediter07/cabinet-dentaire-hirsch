@@ -9,6 +9,14 @@
 
     var translations = {
         fr: {
+            "cookie_banner_title": "Respect de votre vie privée & Cookies",
+            "cookie_banner_desc": "Ce site utilise des cookies techniques essentiels pour assurer son bon fonctionnement et mémoriser vos préférences (langue), ainsi qu\'un service tiers pour l\'affichage de notre plan d\'accès Google Maps. Aucun cookie publicitaire n\'est déposé. Pour en savoir plus, consultez notre",
+            "cookie_banner_learn_more": "Politique des Cookies",
+            "cookie_banner_and": "et notre",
+            "cookie_banner_privacy": "Politique de Confidentialité",
+            "cookie_btn_accept": "Tout Accepter",
+            "cookie_btn_essential": "Essentiels Uniquement",
+            "cookie_btn_customize": "En savoir plus",
             "meta_title": "Cabinet Dentaire Dr. Shandy Hirsch | Chirurgien-Dentiste Luxembourg-Bonnevoie",
             "nav_home": "Accueil",
             "nav_about": "Le Cabinet",
@@ -170,6 +178,14 @@
             "footer_terms": "Mentions Légales"
         },
         en: {
+            "cookie_banner_title": "Respect for your Privacy & Cookies",
+            "cookie_banner_desc": "This website uses essential technical cookies to ensure proper operation and remember your preferences (language), as well as a third-party service for displaying our Google Maps directions. No advertising cookies are used. To learn more, see our",
+            "cookie_banner_learn_more": "Cookie Policy",
+            "cookie_banner_and": "and our",
+            "cookie_banner_privacy": "Privacy Policy",
+            "cookie_btn_accept": "Accept All",
+            "cookie_btn_essential": "Essential Only",
+            "cookie_btn_customize": "Learn More",
             "meta_title": "Cabinet Dentaire Dr. Shandy Hirsch | Dental Surgeon Luxembourg-Bonnevoie",
             "nav_home": "Home",
             "nav_about": "The Clinic",
