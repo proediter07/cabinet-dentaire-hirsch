@@ -328,16 +328,24 @@
         }
     };
 
-    // Primary Default language is FRENCH (fr)
-    // Clear old localStorage key to guarantee French on starting
+    // Primary Starting Language: 100% FRENCH (fr) BY DEFAULT
+    // Clean up any old sticky localStorage so returning users always start in French
+    try {
+        localStorage.removeItem('dr_hirsch_lang');
+        localStorage.removeItem('dr_hirsch_lang_v2');
+    } catch(e) {}
+
     var currentLang = 'fr';
     try {
-        var saved = localStorage.getItem('dr_hirsch_lang_v2');
-        if (saved === 'en') {
+        var urlParams = new URLSearchParams(window.location.search);
+        var urlLang = urlParams.get('lang');
+        if (urlLang === 'en') {
             currentLang = 'en';
-        } else {
+        } else if (urlLang === 'fr') {
             currentLang = 'fr';
-            localStorage.setItem('dr_hirsch_lang_v2', 'fr');
+        } else {
+            var sessionLang = sessionStorage.getItem('dr_hirsch_session_lang');
+            currentLang = (sessionLang === 'en') ? 'en' : 'fr';
         }
     } catch(e) {
         currentLang = 'fr';
@@ -347,7 +355,7 @@
         if (lang !== 'fr' && lang !== 'en') lang = 'fr';
         currentLang = lang;
         try {
-            localStorage.setItem('dr_hirsch_lang_v2', lang);
+            sessionStorage.setItem('dr_hirsch_session_lang', lang);
         } catch(e) {}
 
         var dict = translations[lang] || translations.fr;
