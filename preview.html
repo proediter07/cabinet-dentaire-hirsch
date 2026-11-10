@@ -213,6 +213,9 @@
                                                     <span>✉️</span> dentiste@dr-hirsch.lu
                                                 </a>
                                                 <div style="font-size:12px; color:#94a3b8; margin-top:2px;">Urgences week-end : CHL (112)</div>
+                                                <a href="https://www.google.com/maps?cid=4642013897103449957" target="_blank" rel="noopener noreferrer" class="our-info_item-link" style="display:inline-flex; align-items:center; gap:6px; background:#0284c7; color:#ffffff !important; padding:7px 14px; border-radius:999px; font-weight:700; font-size:12.5px; text-decoration:none; box-shadow:0 3px 10px rgba(2,132,199,0.35); align-self:flex-start; margin-top:4px; transition:transform 0.2s ease, background 0.2s ease;">
+                                                    <span>📍</span> <span data-i18n="info_2_map_btn">Itinéraire Google Maps</span> <span style="font-size:11px;">↗</span>
+                                                </a>
                                             </div>
                                         </div>
 
@@ -291,7 +294,7 @@
                                         <div class="story-slider_slide w-slide">
                                             <div class="story-slider_card">
                                                 <div class="story-slider_image-wrap">
-                                                    <img src="assets/img/team-smile-back-to-back.jpg" loading="eager" alt="Dr Hirsch et son équipe" class="story-slider_image"/>
+                                                    <img src="assets/img/team-smile-back-to-back.jpg" loading="eager" alt="Dr Hirsch et son équipe" class="story-slider_image" style="object-position:center top !important;"/>
                                                 </div>
                                                 <div class="story-slider_content">
                                                     <h3 class="story-slider_title" data-i18n="story_slide1_title">Approche Douce &amp; Anti-Peur</h3>
@@ -364,7 +367,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="section_service">
+                <section class="section_service" id="services">
                     <div class="section-padding padding-0x120">
                         <div class="container">
                             <div class="service_sticky-trigger">
@@ -1004,7 +1007,7 @@
                                     <!-- Card 1: Bilan Adulte -->
                                     <div style="background:#ffffff; border-radius:24px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 10px 24px rgba(0,0,0,0.04); display:flex; flex-direction:column;">
                                         <div style="height:220px; overflow:hidden;">
-                                            <img src="assets/img/dr-hirsch-wax-cap-portrait.jpg" alt="Bilan Adulte" style="width:100%; height:100%; object-fit:cover;" />
+                                            <img src="assets/img/dr-hirsch-wax-cap-portrait.jpg" alt="Bilan Adulte" style="width:100%; height:100%; object-fit:cover; object-position:center top;" />
                                         </div>
                                         <div style="padding:28px; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
                                             <div>
@@ -1025,7 +1028,7 @@
                                     <!-- Card 2: Bilan Enfant -->
                                     <div style="background:#ffffff; border-radius:24px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 10px 24px rgba(0,0,0,0.04); display:flex; flex-direction:column;">
                                         <div style="height:220px; overflow:hidden;">
-                                            <img src="assets/img/team-smile-back-to-back.jpg" alt="Bilan Enfant" style="width:100%; height:100%; object-fit:cover;" />
+                                            <img src="assets/img/team-smile-back-to-back.jpg" alt="Bilan Enfant" style="width:100%; height:100%; object-fit:cover; object-position:center top;" />
                                         </div>
                                         <div style="padding:28px; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
                                             <div>
@@ -1120,7 +1123,7 @@
                                         <div data-duration-in="300" data-duration-out="100" data-current="Tab 1" data-easing="ease" class="faq_tabs w-tabs">
                                             <div class="faq-tab_list w-tab-menu">
                                                 <!-- FAQ 1: Horaires -->
-                                                <a data-w-tab="Tab 1" class="faq_item is-first w-inline-block w-tab-link w--current">
+                                                <div data-w-tab="Tab 1" class="faq_item is-first w-inline-block w-tab-link w--current" role="button" tabindex="0">
                                                     <div class="faq_header">
                                                         <div class="faq-header_title" data-i18n="faq_q1">Quels sont les horaires d'ouverture du cabinet ?</div>
                                                         <div class="faq-header_icon-wrap">
@@ -1138,9 +1141,9 @@
                                                             </p>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </div>
                                                 <!-- FAQ 2: Urgences Semaine & Weekend CHL -->
-                                                <a data-w-tab="Tab 2" class="faq_item w-inline-block w-tab-link">
+                                                <div data-w-tab="Tab 2" class="faq_item w-inline-block w-tab-link" role="button" tabindex="0">
                                                     <div class="faq_header">
                                                         <div class="faq-header_title" data-i18n="faq_q2">Comment se déroule la prise en charge des urgences dentaires ?</div>
                                                         <div class="faq-header_icon-wrap">
@@ -1156,9 +1159,9 @@
                                                             </p>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </div>
                                                 <!-- FAQ 3: Transports & Accès (Page 10) -->
-                                                <a data-w-tab="Tab 3" class="faq_item w-inline-block w-tab-link" id="acces">
+                                                <div data-w-tab="Tab 3" class="faq_item w-inline-block w-tab-link" id="acces" role="button" tabindex="0">
                                                     <div class="faq_header">
                                                         <div class="faq-header_title" data-i18n="faq_q3">Comment accéder au cabinet en transports publics ou voiture ?</div>
                                                         <div class="faq-header_icon-wrap">
@@ -1189,9 +1192,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </div>
                                                 <!-- FAQ 4: Langues parlées (Page 71) -->
-                                                <a data-w-tab="Tab 4" class="faq_item w-inline-block w-tab-link">
+                                                <div data-w-tab="Tab 4" class="faq_item w-inline-block w-tab-link" role="button" tabindex="0">
                                                     <div class="faq_header">
                                                         <div class="faq-header_title" data-i18n="faq_q4">Quelles langues sont parlées au sein du cabinet ?</div>
                                                         <div class="faq-header_icon-wrap">
@@ -1206,9 +1209,9 @@
                                                             </p>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </div>
                                                 <!-- FAQ 5: Prise de RDV & Doctena -->
-                                                <a data-w-tab="Tab 5" class="faq_item is-last w-inline-block w-tab-link">
+                                                <div data-w-tab="Tab 5" class="faq_item is-last w-inline-block w-tab-link" role="button" tabindex="0">
                                                     <div class="faq_header">
                                                         <div class="faq-header_title" data-i18n="faq_q5">Comment prendre rendez-vous au cabinet ?</div>
                                                         <div class="faq-header_icon-wrap">
@@ -1223,7 +1226,7 @@
                                                             </p>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </div>
                                             </div>
                                             <div class="faq-tabs_content w-tab-content">
                                                 <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active"></div>
@@ -1506,5 +1509,117 @@
 })();
 </script>
 <script src="assets/js/i18n.js"></script>
+
+<!-- Bulletproof FAQ Accordion & Accès Map Support -->
+<script>
+(function() {
+    function initFaq() {
+        var items = document.querySelectorAll('.faq_item');
+        if (!items.length) return;
+
+        items.forEach(function(item) {
+            var header = item.querySelector('.faq_header');
+            if (!header) return;
+
+            header.style.cursor = 'pointer';
+            header.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var isOpen = item.classList.contains('is-open') || item.classList.contains('w--current');
+
+                if (isOpen) {
+                    item.classList.remove('w--current', 'is-open');
+                    var desc = item.querySelector('.faq_description');
+                    if (desc) {
+                        desc.style.display = 'none';
+                        desc.style.height = '0px';
+                    }
+                    var icon = item.querySelector('.faq-header_icon-line.is-absolute');
+                    if (icon) icon.style.display = 'block';
+                } else {
+                    items.forEach(function(other) {
+                        other.classList.remove('w--current', 'is-open');
+                        var otherDesc = other.querySelector('.faq_description');
+                        if (otherDesc) {
+                            otherDesc.style.display = 'none';
+                            otherDesc.style.height = '0px';
+                        }
+                        var otherIcon = other.querySelector('.faq-header_icon-line.is-absolute');
+                        if (otherIcon) otherIcon.style.display = 'block';
+                    });
+
+                    item.classList.add('w--current', 'is-open');
+                    var desc = item.querySelector('.faq_description');
+                    if (desc) {
+                        desc.style.display = 'block';
+                        desc.style.height = 'auto';
+                    }
+                    var icon = item.querySelector('.faq-header_icon-line.is-absolute');
+                    if (icon) icon.style.display = 'none';
+                }
+            });
+        });
+
+        function activateTab(targetId) {
+            var target = document.getElementById(targetId);
+            if (!target) return;
+            items.forEach(function(other) {
+                other.classList.remove('w--current', 'is-open');
+                var otherDesc = other.querySelector('.faq_description');
+                if (otherDesc) {
+                    otherDesc.style.display = 'none';
+                    otherDesc.style.height = '0px';
+                }
+                var otherIcon = other.querySelector('.faq-header_icon-line.is-absolute');
+                if (otherIcon) otherIcon.style.display = 'block';
+            });
+            target.classList.add('w--current', 'is-open');
+            var desc = target.querySelector('.faq_description');
+            if (desc) {
+                desc.style.display = 'block';
+                desc.style.height = 'auto';
+            }
+            var icon = target.querySelector('.faq-header_icon-line.is-absolute');
+            if (icon) icon.style.display = 'none';
+            setTimeout(function() {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50);
+        }
+
+        function handleHash() {
+            var hash = window.location.hash.replace('#', '');
+            if (hash === 'acces') {
+                activateTab('acces');
+            } else if (hash === 'horaires') {
+                var first = items[0];
+                if (first) {
+                    first.classList.add('w--current', 'is-open');
+                    var desc = first.querySelector('.faq_description');
+                    if (desc) { desc.style.display = 'block'; desc.style.height = 'auto'; }
+                }
+            }
+        }
+
+        window.addEventListener('hashchange', handleHash);
+        if (window.location.hash === '#acces') {
+            setTimeout(handleHash, 200);
+        }
+
+        document.querySelectorAll('a[href="#acces"]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                activateTab('acces');
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFaq);
+    } else {
+        initFaq();
+    }
+})();
+</script>
+
 </body>
 </html>
