@@ -305,7 +305,7 @@
                                         <div class="story-slider_slide w-slide">
                                             <div class="story-slider_card">
                                                 <div class="story-slider_image-wrap">
-                                                    <img src="assets/img/dr-hirsch-treatment-room.jpg" loading="eager" alt="Fauteuil Ergonomique Haute Technologie" class="story-slider_image"/>
+                                                    <img src="assets/img/dr-hirsch-treatment-room.jpg" loading="eager" alt="Fauteuil Ergonomique Haute Technologie" class="story-slider_image" style="object-position:center center !important;"/>
                                                 </div>
                                                 <div class="story-slider_content">
                                                     <h3 class="story-slider_title" data-i18n="story_slide2_title">Fauteuil Ergonomique Haute Technologie</h3>
@@ -316,7 +316,7 @@
                                         <div class="story-slider_slide w-slide">
                                             <div class="story-slider_card">
                                                 <div class="story-slider_image-wrap">
-                                                    <img src="assets/img/surgical-loupes-microsurgery-closeup.jpg" loading="eager" alt="Aides Optiques & Micro-Chirurgie" class="story-slider_image"/>
+                                                    <img src="assets/img/surgical-loupes-microsurgery-closeup.jpg" loading="eager" alt="Aides Optiques & Micro-Chirurgie" class="story-slider_image" style="object-position:center center !important;"/>
                                                 </div>
                                                 <div class="story-slider_content">
                                                     <h3 class="story-slider_title" data-i18n="story_slide3_title">Aides Optiques &amp; Micro-Chirurgie</h3>
@@ -327,7 +327,7 @@
                                         <div class="story-slider_slide w-slide">
                                             <div class="story-slider_card">
                                                 <div class="story-slider_image-wrap">
-                                                    <img src="assets/img/dr-shandy-hirsch-portrait.jpg" loading="eager" alt="Docteur Shandy Hirsch" class="story-slider_image"/>
+                                                    <img src="assets/img/dr-shandy-hirsch-portrait.jpg" loading="eager" alt="Docteur Shandy Hirsch" class="story-slider_image" style="object-position:center 20% !important;"/>
                                                 </div>
                                                 <div class="story-slider_content">
                                                     <h3 class="story-slider_title" data-i18n="story_slide4_title">Spécialiste Diplômée</h3>
@@ -338,7 +338,7 @@
                                         <div class="story-slider_slide w-slide">
                                             <div class="story-slider_card">
                                                 <div class="story-slider_image-wrap">
-                                                    <img src="assets/img/treatment-in-progress-bw.jpg" loading="eager" alt="Soins dentaires Luxembourg" class="story-slider_image"/>
+                                                    <img src="assets/img/treatment-in-progress-bw.jpg" loading="eager" alt="Soins dentaires Luxembourg" class="story-slider_image" style="object-position:center center !important;"/>
                                                 </div>
                                                 <div class="story-slider_content">
                                                     <h3 class="story-slider_title" data-i18n="story_slide5_title">Prise en Charge des Urgences</h3>
@@ -1574,16 +1574,29 @@
                 if (otherIcon) otherIcon.style.display = 'block';
             });
             target.classList.add('w--current', 'is-open');
+            target.style.setProperty('opacity', '1', 'important');
+            target.style.setProperty('filter', 'none', 'important');
+            target.style.setProperty('transform', 'none', 'important');
+            target.style.setProperty('visibility', 'visible', 'important');
+
             var desc = target.querySelector('.faq_description');
             if (desc) {
                 desc.style.display = 'block';
                 desc.style.height = 'auto';
+                desc.style.setProperty('opacity', '1', 'important');
+                desc.style.setProperty('visibility', 'visible', 'important');
+            }
+            var inner = target.querySelector('.faq-description_inner');
+            if (inner) {
+                inner.style.setProperty('opacity', '1', 'important');
+                inner.style.setProperty('transform', 'none', 'important');
+                inner.style.setProperty('visibility', 'visible', 'important');
             }
             var icon = target.querySelector('.faq-header_icon-line.is-absolute');
             if (icon) icon.style.display = 'none';
             setTimeout(function() {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 50);
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 80);
         }
 
         function handleHash() {

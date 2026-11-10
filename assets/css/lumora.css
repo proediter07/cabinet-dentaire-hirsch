@@ -10060,3 +10060,46 @@ html, body {
     gap: 6px !important;
   }
 }
+
+
+/* ========================================================
+   FAQ ACCORDION & #ACCES VISIBILITY GUARANTEE
+   ======================================================== */
+.faq_item, .faq_item#acces, .faq_item.is-open, .faq_item.w--current {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+.faq_item .faq-description_inner {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* ========================================================
+   PRESENTATION SLIDER DESKTOP & MOBILE CARD PROPORTIONS
+   ======================================================== */
+@media (min-width: 992px) {
+  .story-slider_mask {
+    width: 420px !important;
+    max-width: 420px !important;
+    overflow: visible !important;
+  }
+  .story-slider_slide {
+    width: 420px !important;
+    max-width: 420px !important;
+    height: auto !important;
+  }
+  .story-slider_image-wrap {
+    height: 260px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+  .story-slider_card {
+    width: 100% !important;
+    max-width: 420px !important;
+  }
+}
