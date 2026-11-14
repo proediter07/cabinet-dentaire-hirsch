@@ -1,19 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="42" viewBox="0 0 260 42" fill="none" role="img" aria-label="Cabinet Dentaire Dr. Shandy Hirsch">
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="48" viewBox="0 0 280 48" fill="none" role="img" aria-label="Cabinet Dentaire Dr. Shandy Hirsch">
   <defs>
-    <linearGradient id="hirsch-grad-gold" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#be185d"/>
-      <stop offset="50%" stop-color="#db2777"/>
-      <stop offset="100%" stop-color="#f43f5e"/>
+    <linearGradient id="footPulpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#be185d" />
+      <stop offset="50%" stop-color="#db2777" />
+      <stop offset="100%" stop-color="#f43f5e" />
     </linearGradient>
-    <filter id="logo-shadow" x="-10%" y="-10%" width="120%" height="130%">
+    <linearGradient id="footCircleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="50%" stop-color="#db2777" />
+      <stop offset="100%" stop-color="#9d174d" />
+    </linearGradient>
+    <radialGradient id="footGlassBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#08333a" />
+      <stop offset="100%" stop-color="#011f23" />
+    </radialGradient>
+    <filter id="footTextShadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.4"/>
     </filter>
   </defs>
-  <g transform="translate(3, 4)">
-    <rect width="34" height="34" rx="10" fill="url(#hirsch-grad-gold)"/>
-    <path d="M17 7C14.5 7 12.8 8.2 12.2 10.2C11.5 12.5 11 15 11.5 18C12 21 13 25 14.5 25C15.8 25 16.2 23 17 21C17.8 23 18.2 25 19.5 25C21 25 22 21 22.5 18C23 15 22.5 12.5 21.8 10.2C21.2 8.2 19.5 7 17 7Z" fill="white" stroke="white" stroke-width="0.8" stroke-linejoin="round"/>
-    <circle cx="23" cy="9" r="1.5" fill="#fef08a"/>
+
+  <!-- Left Emblem (42px) -->
+  <g transform="translate(2, 3) scale(0.42)">
+    <circle cx="50" cy="50" r="47" fill="url(#footGlassBg)" stroke="url(#footCircleGrad)" stroke-width="2.5" />
+    <path d="M 3 53 C 18 53, 21 40, 29 48" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M 97 53 C 82 53, 79 40, 71 48" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M 26 24 C 36 21, 46 27, 50 25 C 54 27, 64 21, 74 24 C 77 34, 75 44, 71 52 C 67 62, 69 76, 68 85 C 67 89, 61 90, 58 87 C 55 83, 56 68, 54 58 C 52 50, 48 50, 46 58 C 44 68, 45 83, 42 87 C 39 90, 33 89, 32 85 C 31 76, 33 62, 29 52 C 25 44, 23 34, 26 24 Z" 
+          fill="rgba(255, 255, 255, 0.08)" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round" />
+    <path d="M 27 27 C 38 31, 46 29, 50 33 C 54 29, 62 31, 73 27" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M 38 40 C 44 38, 48 40, 50 39 C 52 40, 56 38, 62 40 C 63 46, 60 52, 58 60 C 56 68, 58 76, 56 78 C 55 78, 54 77, 54 74 C 53 66, 52 54, 50 51 C 48 54, 47 66, 46 74 C 46 77, 45 78, 44 78 C 42 76, 44 68, 42 60 C 40 52, 37 46, 38 40 Z" 
+          fill="url(#footPulpGrad)" />
   </g>
-  <text x="46" y="21" fill="#ffffff" filter="url(#logo-shadow)" font-family="'Plus Jakarta Sans', Sora, -apple-system, sans-serif" font-size="16.5" font-weight="800" letter-spacing="-0.3">Dr. Shandy Hirsch</text>
-  <text x="46" y="33.5" fill="#f472b6" font-family="'Plus Jakarta Sans', Sora, -apple-system, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.8" text-transform="uppercase">Cabinet Dentaire • Luxembourg</text>
+
+  <!-- Typography Right -->
+  <text x="54" y="23" fill="#ffffff" filter="url(#footTextShadow)" font-family="'Plus Jakarta Sans', Sora, -apple-system, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.3">Dr. Shandy Hirsch</text>
+  <text x="54" y="37" fill="#f472b6" font-family="'Plus Jakarta Sans', Sora, -apple-system, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.8" text-transform="uppercase">Cabinet Dentaire • Luxembourg</text>
 </svg>
